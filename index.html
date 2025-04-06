@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dynamic Mockups Integration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SDK de Dynamic Mockups -->
+    <script src="https://cdn.jsdelivr.net/npm/@dynamic-mockups/mockup-editor-sdk@latest/dist/index.js"></script>
+  </head>
+  <body>
+    <!-- Iframe affichant l'éditeur -->
+    <iframe
+      id="dm-iframe"
+      src="https://embed.dynamicmockups.com"
+      style="width: 100%; height: 90vh; border: none;"
+    ></iframe>
+
+    <!-- Initialisation de l'éditeur -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        DynamicMockups.initDynamicMockupsIframe({
+          iframeId: "dm-iframe",
+          data: { "x-website-key": "qPIsjMErpja5" },
+          mode: "download",
+        });
+      });
+    </script>
+  </body>
+</html>
