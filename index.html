@@ -19,7 +19,6 @@
     <!-- Initialisation de l'éditeur -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll('a.app-logo-link').forEach(el => el.remove());
         DynamicMockups.initDynamicMockupsIframe({
           iframeId: "dm-iframe",
           data: { "x-website-key": "qPIsjMErpja5" },
@@ -27,5 +26,16 @@
         });
       });
     </script>
+      <script>
+      const interval = setInterval(() => {
+  const logos = document.querySelectorAll('a.app-logo-link');
+  if (logos.length > 0) {
+    logos.forEach(el => el.remove());
+    clearInterval(interval); // Stoppe la boucle une fois supprimé
+  }
+}, 100); // Vérifie toutes les 500ms
+
+    </script>
+    
   </body>
 </html>
