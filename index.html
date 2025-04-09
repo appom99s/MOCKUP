@@ -24,18 +24,16 @@
           data: { "x-website-key": "qPIsjMErpja5" },
           mode: "download",
         });
+
+        // Supprime le lien app-logo-link dès qu'il apparaît
+        const interval = setInterval(() => {
+          const logos = document.querySelectorAll('a.app-logo-link');
+          if (logos.length > 0) {
+            logos.forEach(el => el.remove());
+            clearInterval(interval); // Stoppe la boucle une fois supprimé
+          }
+        }, 500); // Vérifie toutes les 500ms
       });
     </script>
-      <script>
-      const interval = setInterval(() => {
-  const logos = document.querySelectorAll('a.app-logo-link');
-  if (logos.length > 0) {
-    logos.forEach(el => el.remove());
-    clearInterval(interval); // Stoppe la boucle une fois supprimé
-  }
-}, 100); // Vérifie toutes les 500ms
-
-    </script>
-    
   </body>
 </html>
