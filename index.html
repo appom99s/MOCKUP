@@ -19,6 +19,7 @@
     <!-- Initialisation de l'éditeur -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('a.app-logo-link').forEach(el => el.remove());
         DynamicMockups.initDynamicMockupsIframe({
           iframeId: "dm-iframe",
           data: { "x-website-key": "qPIsjMErpja5" },
