@@ -2,26 +2,11 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <style>
-  /* Cache immédiatement tout élément avec la classe .app-logo-link */
-  a.app-logo-link {
-    display: none !important;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  /* Par précaution, cache aussi l’image à l’intérieur */
-  a.app-logo-link img.app-logo {
-    display: none !important;
-  }
-</style>
     <title>Dynamic Mockups Integration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- SDK de Dynamic Mockups -->
-    <script src="https://cdn.jsdelivr.net/npm/@dynamic-mockups/mockup-editor-sdk@latest/dist/index.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@dynamic-mockups/mockup-editor-sdk@latest/dist/index.js"></script>
   </head>
   <body>
     <!-- Iframe affichant l'éditeur -->
@@ -39,9 +24,9 @@
           data: { "x-website-key": "qPIsjMErpja5" },
           mode: "download",
         });
-
-        // Supprime le lien app-logo-link dès qu'il apparaît
+      });
     </script>
+      
     
   </body>
-</html>
+</html> 
