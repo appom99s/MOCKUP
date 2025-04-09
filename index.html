@@ -2,6 +2,20 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <style>
+  /* Cache immédiatement tout élément avec la classe .app-logo-link */
+  a.app-logo-link {
+    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Par précaution, cache aussi l’image à l’intérieur */
+  a.app-logo-link img.app-logo {
+    display: none !important;
+  }
+</style>
     <title>Dynamic Mockups Integration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
@@ -35,19 +49,6 @@
         }, 500); // Vérifie toutes les 500ms
       });
     </script>
-    <style>
-  /* Cache immédiatement tout élément avec la classe .app-logo-link */
-  a.app-logo-link {
-    display: none !important;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  /* Par précaution, cache aussi l’image à l’intérieur */
-  a.app-logo-link img.app-logo {
-    display: none !important;
-  }
-</style>
+    
   </body>
 </html>
