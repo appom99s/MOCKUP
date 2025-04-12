@@ -7,6 +7,12 @@
     
     <!-- SDK de Dynamic Mockups -->
     <script src="https://cdn.jsdelivr.net/npm/@dynamic-mockups/mockup-editor-sdk@latest/dist/index.js"></script>
+    <style>
+  .navigation-menu .app-logo-link .app-logo {
+    display: none;
+  }
+</style>
+
   </head>
   <body>
     <!-- Iframe affichant l'éditeur -->
@@ -32,11 +38,6 @@
           mode: "download",
         });
       });
-       const appLogo = document.querySelector(".app-logo");
-    if (appLogo) {
-        appLogo.remove();
-    }
-}, 100);
     </script>
       
     
